@@ -6,6 +6,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { Keyboard } from '@ionic-native/keyboard';
 
 import { HomePage } from "../pages/home/home"; 
+import { BerandaPage } from "../pages/beranda/beranda"; 
+import { AkunSayaPage } from "../pages/akun-saya/akun-saya"; 
 import { LoginPage } from "../pages/login/login";
 import { LocalWeatherPage } from "../pages/local-weather/local-weather";
 
@@ -35,8 +37,8 @@ export class MyApp {
     this.initializeApp();
 
     this.appMenuItems = [
-      {title: 'Home', component: HomePage, icon: 'home'},
-      {title: 'Local Weather', component: LocalWeatherPage, icon: 'partly-sunny'}
+      {title: 'Home', component: BerandaPage, icon: 'home'}, 
+      {title: 'Akun Saya', component: AkunSayaPage, icon: 'person'}, 
     ];
   }
 
