@@ -1,0 +1,269 @@
+ 
+<ion-header no-border>
+  <ion-navbar color="secondary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+   <ion-buttons text-center  class="logo-header">
+      <img src="../assets/img/logo.svg"/>
+    </ion-buttons> 
+
+  <!--   <ion-buttons end>
+      <button ion-button tappable (click)="presentNotifications($event)">
+        <ion-icon name="notifications"></ion-icon>
+      </button>
+      <button ion-button tappable (click)="goToAccount()">
+        <ion-icon name="cog"></ion-icon>
+      </button>
+    </ion-buttons> -->
+
+  </ion-navbar>
+
+  <ion-toolbar>
+    <ion-segment [(ngModel)]="segmentHome" color="secondary" class="login">
+      <ion-segment-button value="beranda">
+        Beranda
+      </ion-segment-button>
+      <ion-segment-button value="lini-masa">
+        Lini Masa
+      </ion-segment-button>
+       <ion-segment-button value="pasar-terdekat">
+        Pasar Terdekat
+      </ion-segment-button>
+    </ion-segment>  
+  </ion-toolbar>
+</ion-header>
+ 
+<ion-content no-padding class="animated fadeIn common-bg">
+
+ <!--  <ion-card no-margin margin-bottom class="full-width">
+    <ion-item tappable (click)="choosePlace('from')" class="border-bottom">
+      <ion-icon name="search" color="primary" item-left></ion-icon>
+      <span>{{ search.name }}</span>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="md-calendar" color="primary" item-left></ion-icon>
+      <ion-datetime class="no-pl" displayFormat="DD/MM/YYYY" pickerFormat="DD/MM/YYYY" [(ngModel)]="search.date"></ion-datetime>
+    </ion-item>
+  </ion-card>
+
+  <button ion-button icon-start block no-margin color="primary" class="round" tappable (click)="doSearch()">
+    <ion-icon name="search"></ion-icon> Search
+  </button> -->
+  
+<div [ngSwitch]="segmentHome"> 
+
+  <ion-list *ngSwitchCase="'beranda'"> 
+      <!-- Search -->
+       <ion-searchbar (ionInput)="getItems($event)"  (ionInput)="onInput($event)"
+        (ionCancel)="onCancel($event)"  debounce="250" autocomplete="on" showCancelButton="on"></ion-searchbar>
+        <ion-list>
+          <ion-item *ngFor="let item of items">
+            {{ item }}
+          </ion-item>
+        </ion-list>
+      <!-- /Search -->
+      
+      <!-- Slider  -->
+      <div id="slider" color="secondary">
+         <ion-slides  autoplay="5000" loop="true" speed="500" class="slides" pager="true" zoom="true"> 
+          <ion-slide>
+            <div class="swiper-zoom-container">
+              <img src="../assets/img/thumb/slider1.jpg">
+            </div> 
+          </ion-slide>
+          <ion-slide>
+            <div class="swiper-zoom-container">
+              <img src="../assets/img/thumb/slider2.jpg">
+            </div> 
+          </ion-slide>  
+        </ion-slides> 
+      </div>
+      <!-- End Slider -->
+
+      <!-- Grid -->
+      <ion-grid>
+        <ion-row>
+          <ion-col col-6 >  
+              <ion-card (click)="detailPage()">
+                <img src="../assets/img/thumb/1.jpg">
+                <ion-card-content>
+                  <ion-card-title>
+                    SENEN
+                    </ion-card-title> 
+                </ion-card-content>
+              </ion-card> 
+          </ion-col>
+           <ion-col col-6>
+              <ion-card (click)="detailPage()">
+                <img src="../assets/img/thumb/1.jpg">
+                <ion-card-content>
+                  <ion-card-title>
+                    KAMPUNG DURI
+                    </ion-card-title> 
+                </ion-card-content>
+              </ion-card> 
+          </ion-col>
+            <ion-col col-6 >  
+              <ion-card (click)="detailPage()">
+                <img src="../assets/img/thumb/1.jpg">
+                <ion-card-content>
+                  <ion-card-title>
+                    GLODOK
+                    </ion-card-title> 
+                </ion-card-content>
+              </ion-card> 
+          </ion-col>
+           <ion-col col-6>
+              <ion-card (click)="detailPage()">
+                <img src="../assets/img/thumb/1.jpg">
+                <ion-card-content>
+                  <ion-card-title>
+                    KRAMAT JATI
+                    </ion-card-title> 
+                </ion-card-content>
+              </ion-card> 
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <!-- Grid -->
+
+  </ion-list>
+
+  <ion-list *ngSwitchCase="'lini-masa'">
+     <ion-card (click)="detailPage()">  
+          <ion-grid>
+            <ion-row>
+              <ion-col col-4 >
+                <ion-thumbnail item-start>
+                  <img src="../assets/img/thumb/1.jpg">
+                </ion-thumbnail>
+              </ion-col>
+              <ion-col col-8 class="list-article">
+                <h2>Kenaikan Harga Telur</h2>
+                <span>23 Juli 2018</span>
+                <p>Peternak ayam menyatakan pelarangan pemakaian antibiotic growth promotor atu AGP, menjadi pemicu dari melonjaknya harga telur ayam di pasaran </p>
+              </ion-col>
+            </ion-row>
+          </ion-grid>  
+      </ion-card>  
+
+      <ion-card (click)="detailPage()">  
+          <ion-grid>
+            <ion-row>
+              <ion-col col-4 >
+                <ion-thumbnail item-start>
+                  <img src="../assets/img/thumb/1.jpg">
+                </ion-thumbnail>
+              </ion-col>
+              <ion-col col-8 class="list-article">
+                <h2>Kenaikan Harga Telur</h2>
+                <span>23 Juli 2018</span>
+                <p>Peternak ayam menyatakan pelarangan pemakaian antibiotic growth promotor atu AGP, menjadi pemicu dari melonjaknya harga telur ayam di pasaran </p>
+              </ion-col>
+            </ion-row>
+          </ion-grid>  
+      </ion-card>  
+
+      <ion-card (click)="detailPage()">  
+          <ion-grid>
+            <ion-row>
+              <ion-col col-4 >
+                <ion-thumbnail item-start>
+                  <img src="../assets/img/thumb/1.jpg">
+                </ion-thumbnail>
+              </ion-col>
+              <ion-col col-8 class="list-article">
+                <h2>Kenaikan Harga Telur</h2>
+                <span>23 Juli 2018</span>
+                <p>Peternak ayam menyatakan pelarangan pemakaian antibiotic growth promotor atu AGP, menjadi pemicu dari melonjaknya harga telur ayam di pasaran </p>
+              </ion-col>
+            </ion-row>
+          </ion-grid>  
+      </ion-card>  
+
+       <ion-card (click)="detailPage()">  
+          <ion-grid>
+            <ion-row>
+              <ion-col col-4 >
+                <ion-thumbnail item-start>
+                  <img src="../assets/img/thumb/1.jpg">
+                </ion-thumbnail>
+              </ion-col>
+              <ion-col col-8 class="list-article">
+                <h2>Kenaikan Harga Telur</h2>
+                <span>23 Juli 2018</span>
+                <p>Peternak ayam menyatakan pelarangan pemakaian antibiotic growth promotor atu AGP, menjadi pemicu dari melonjaknya harga telur ayam di pasaran </p>
+              </ion-col>
+            </ion-row>
+          </ion-grid>  
+      </ion-card>  
+  </ion-list>
+
+  <ion-list *ngSwitchCase="'pasar-terdekat'">
+    
+    <ion-list padding>
+      <ion-item (click)="detailPage()">
+        <ion-thumbnail item-start>
+          <img src="../assets/img/logo-pasar-jaya.svg">
+        </ion-thumbnail>
+        <h2>Johar Baru</h2> 
+        <button ion-button clear  item-end icon-start class="text-grey"><ion-icon name="pin"> </ion-icon> 10m </button>
+      </ion-item>
+      <ion-item (click)="detailPage()">
+        <ion-thumbnail item-start>
+          <img src="../assets/img/logo-pasar-jaya.svg">
+        </ion-thumbnail>
+        <h2>Senen</h2> 
+        <button ion-button clear item-end icon-start class="text-grey"><ion-icon name="pin"> </ion-icon> 9m </button>
+      </ion-item>
+      <ion-item (click)="detailPage()">
+        <ion-thumbnail item-start>
+          <img src="../assets/img/logo-pasar-jaya.svg">
+        </ion-thumbnail>
+        <h2>Cempaka Putih</h2> 
+        <button ion-button clear item-end icon-start class="text-grey"><ion-icon name="pin"> </ion-icon> 15m </button>
+      </ion-item>
+      <ion-item (click)="detailPage()">
+        <ion-thumbnail item-start>
+          <img src="../assets/img/logo-pasar-jaya.svg">
+        </ion-thumbnail>
+        <h2>Rawasari</h2> 
+        <button ion-button clear item-end icon-start class="text-grey"><ion-icon name="pin"> </ion-icon> 90m </button>
+      </ion-item> 
+      <ion-item (click)="detailPage()">
+        <ion-thumbnail item-start>
+          <img src="../assets/img/logo-pasar-jaya.svg">
+        </ion-thumbnail>
+        <h2>Sumur Batu</h2> 
+        <button ion-button clear item-end icon-start class="text-grey"><ion-icon name="pin"> </ion-icon> 10m </button>
+      </ion-item> 
+       <ion-item (click)="detailPage()">
+        <ion-thumbnail item-start>
+          <img src="../assets/img/logo-pasar-jaya.svg">
+        </ion-thumbnail>
+        <h2>Kemayoran</h2> 
+        <button ion-button clear item-end icon-start class="text-grey"><ion-icon name="pin"> </ion-icon> 120m </button>
+      </ion-item> 
+        <ion-item (click)="detailPage()">
+        <ion-thumbnail item-start>
+          <img src="../assets/img/logo-pasar-jaya.svg">
+        </ion-thumbnail>
+        <h2>Mangga Besar</h2> 
+        <button ion-button clear item-end icon-start class="text-grey"><ion-icon name="pin"> </ion-icon> 45m </button>
+      </ion-item> 
+        <ion-item (click)="detailPage()">
+        <ion-thumbnail item-start>
+          <img src="../assets/img/logo-pasar-jaya.svg">
+        </ion-thumbnail>
+        <h2>Mangga Dua</h2> 
+        <button ion-button clear item-end icon-start class="text-grey"><ion-icon name="pin"> </ion-icon> 123m </button>
+      </ion-item> 
+    </ion-list>
+
+  </ion-list>
+
+</div>
+
+</ion-content>
+ 

@@ -1,0 +1,90 @@
+<!-- -->
+<ion-content padding class="animated fadeIn login auth-page ">
+  <div class="login-content">
+
+    <!-- Logo -->
+    <div padding-horizontal text-center class="register"> 
+      <div class="logo"></div> 
+    </div>
+    <div padding-horizontal text-center class="animated fadeInDown">  
+      <div class="logo-silaura"></div> 
+    </div>
+
+    <!-- Login form -->
+    <form class="list-form">
+      <ion-item>
+        <ion-label floating> 
+          No.HP
+        </ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+ 
+        <ion-row>
+          <ion-col col-8>
+             <ion-item>
+              <ion-label floating> 
+                Masukan NIK
+              </ion-label>
+              <ion-input type="text"></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col col-4>
+            <button ion-button block color="danger" tappable >
+              cek NIK
+            </button>
+          </ion-col> 
+        </ion-row>  
+
+      <ion-list>
+        <ion-item>
+          <ion-label floating>Apa Nama Pavorit Kamu?</ion-label>
+          <ion-select >
+            <ion-option value="hijau">Hijau</ion-option>
+            <ion-option value="kuninga">Kuning</ion-option>
+            <ion-option value="kelabu">Kelabu</ion-option>
+            <ion-option value="merah">Merah</ion-option>
+            <ion-option value="biru">Biru</ion-option>
+            <ion-option value="jingga">Jingga</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+
+       <ion-item>
+        <ion-label floating> 
+          Jawaban Pertanyaan
+        </ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating> 
+          PIN/Password
+        </ion-label>
+        <ion-input type="password"></ion-input>
+      </ion-item>
+
+       <ion-item>
+        <ion-label floating> 
+          Ulangi PIN/Password
+        </ion-label>
+        <ion-input type="password"></ion-input>
+      </ion-item>
+
+    </form>
+
+    <div margin-top>
+      <button ion-button block color="secondary" tappable (click)="register()" round>
+        DAFTAR AKUN
+      </button>
+    </div>
+
+    <!-- Other links -->
+    <div text-center margin-top>
+      <span ion-text color="primary" tappable (click)="login()">I have an account</span>
+    </div>
+
+    <div class="terms" text-center>
+      <span>By Clicking DAFTAR AKUN, i confirm i have agreed to <a color="primary" (click)="terms()">Term & Condition and Privacy  </a> of BPBUMD</span>
+    </div>
+  </div>
+</ion-content>

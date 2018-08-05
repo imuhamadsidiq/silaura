@@ -1,0 +1,107 @@
+ 
+<ion-header no-border>
+  <ion-navbar color="secondary"> 
+   <ion-buttons text-center  class="logo-header">
+      <img src="../assets/img/logo.svg"/>
+    </ion-buttons>  
+  </ion-navbar> 
+</ion-header>
+
+
+
+<ion-content padding>
+	<ion-card class="monitoring-detail"> 
+		<ion-card-content>
+	  <!-- Login form -->
+	    <form class="list-form">
+	      <ion-item>
+	        <ion-label floating> 
+	          No.HP
+	        </ion-label>
+	        <ion-input type="text" value="08677885777"></ion-input>
+	      </ion-item>
+	       <ion-item>
+	        <ion-label floating> 
+	          Email
+	        </ion-label>
+	        <ion-input type="email" value="rahmansetiyadi@gmail.com"></ion-input>
+	      </ion-item>
+	 
+	        <ion-row>
+	          <ion-col col-8>
+	             <ion-item>
+	              <ion-label floating> 
+	                NIK Anda
+	              </ion-label>
+	              <ion-input type="text" value="109888990004"></ion-input>
+	            </ion-item>
+	          </ion-col>
+	          <ion-col col-4>
+	            <button ion-button block color="danger" tappable >
+	              cek NIK
+	            </button>
+	          </ion-col> 
+	        </ion-row>  
+ 
+	       <ion-item>
+	        <ion-label floating> 
+	          Nama Lengkap
+	        </ion-label>
+	        <ion-input type="text" value="Rahman Setiyadi"></ion-input>
+	      </ion-item>
+
+	      <ion-item>
+	        <ion-label floating> 
+	          Alamat
+	        </ion-label>
+	        <ion-input type="text" value="Jl. rawamangun no 12"></ion-input>
+	      </ion-item>
+
+	       <ion-row>
+	          <ion-col col-6>
+	          	<ion-item>
+	            <ion-label floating> 
+			          Provinsi
+			        </ion-label>
+			        <ion-input type="text" value="DKI Jakarta"></ion-input>
+			      </ion-item>
+	          </ion-col>
+	          <ion-col col6> 
+	          	<ion-item>
+			      <ion-label floating> 
+			          Kota
+			        </ion-label>
+			        <ion-input type="text" value="Jakarta Pusat"></ion-input>
+			      </ion-item>
+	          </ion-col> 
+	        </ion-row>  
+
+	          <ion-row>
+	          <ion-col col-6>
+	          		<ion-item>
+		           		<ion-label floating> 
+				          Jenis Kelamin
+				        </ion-label>
+				        <ion-input type="text" value="Laki-laki"></ion-input>
+			      </ion-item>
+	          </ion-col>
+	          <ion-col col6> 
+	          	<ion-item>
+					<ion-label floating> 
+			          Tanggal Lahir
+			        </ion-label>
+			        <ion-input type="text" value="19-Agustus-1988"></ion-input>
+			      </ion-item> 
+	          </ion-col> 
+	        </ion-row>   
+	    
+	    </form>
+
+	    <div margin-top>
+	      <button ion-button block color="secondary" tappable (click)="register()" round>
+	        Simpan Perubahan
+	      </button>
+	    </div>
+	 </ion-card-content>
+	</ion-card>
+</ion-content>
