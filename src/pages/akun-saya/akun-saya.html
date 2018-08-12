@@ -1,20 +1,20 @@
  
 <ion-header no-border>
   <ion-navbar color="secondary"> 
-   <ion-buttons text-center  class="logo-header">
-      <img src="../assets/img/logo.svg"/>
+   <ion-buttons text-center  class="logo-header-clean">
+      <img src="./assets/img/logo.svg"/>
     </ion-buttons>  
   </ion-navbar>  
 </ion-header>
 
 
-<ion-content padding class="animated fadeIn common-bg">
+<ion-content class="animated fadeIn common-bg">
 	 <ion-card no-padding>  
-	      <ion-grid>
+	      <ion-grid class="padding-content">
 	        <ion-row>
 	          <ion-col col-4 class="secondary-bg profile">
 	            <ion-thumbnail item-start>
-	              <img src="../assets/img/avatar.jpg">
+	              <img src="./assets/img/avatar.jpg">
 	            </ion-thumbnail>
 	          </ion-col>
 	          <ion-col col-8 class="profile">
@@ -26,31 +26,36 @@
 	      </ion-grid>  
 	  </ion-card>  
 
-	<ion-list>
-	  <ion-item (click)="inbox()" >
-	    <ion-icon name="mail" item-start ></ion-icon>
-	      Inbox 
-	   </ion-item>
-	   <ion-item (click)="changeProfile()">
-	    <ion-icon name="happy" item-start ></ion-icon>
-	      Update Profile 
-	  </ion-item>
-	   <ion-item (click)="changePassword()">
-	    <ion-icon name="lock" item-start ></ion-icon>
-	      Ganti PIN/Password 
-	  </ion-item>
-	   <ion-item>
-	    <ion-icon name="information-circle" item-start></ion-icon>
-	      Term of Service / Disclaimer 
-	  </ion-item>
-	  	<ion-item  (click)="detailPelayanan()">
-	    <ion-icon name="chatbubbles" item-start></ion-icon>
-	      Layanan Keluhan 
-	  </ion-item>
-	  	<ion-item  (click)="logOut()">
-	    <ion-icon name="log-out" item-start></ion-icon>
-	      Logout 
-	  </ion-item>
-	</ion-list>
+
+	<ion-card> 
+		<ion-card-content no-padding>
+			<ion-list>
+			  <ion-item (click)="inbox()" >
+			    <ion-icon name="mail" item-start ></ion-icon>
+			      Inbox 
+			   </ion-item>
+			   <ion-item (click)="changeProfile()">
+			    <ion-icon name="happy" item-start ></ion-icon>
+			      Update Profile 
+			  </ion-item>
+			   <ion-item (click)="changePassword()">
+			    <ion-icon name="lock" item-start ></ion-icon>
+			      Ganti PIN/Password 
+			  </ion-item>
+			   <ion-item>
+			    <ion-icon name="information-circle" item-start></ion-icon>
+			      Term of Service / Disclaimer 
+			  </ion-item>
+			  	<ion-item  (click)="detailPelayanan()">
+			    <ion-icon name="chatbubbles" item-start></ion-icon>
+			      Layanan Keluhan 
+			  </ion-item>
+			  	<ion-item  (click)="logOut()">
+			    <ion-icon name="log-out" item-start></ion-icon>
+			      Logout 
+			  </ion-item>
+			</ion-list>
+		</ion-card-content>
+	</ion-card>
 
 </ion-content>

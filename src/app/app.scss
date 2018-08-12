@@ -2,6 +2,8 @@
 // App Shared Imports
 // --------------------------------------------------
 
+
+
 // global styles
 .primary-bg {
   background-color: color($colors, primary) !important;
@@ -229,14 +231,22 @@ ion-badge {
     border-radius: 0;
   }
 }
+
+.button-padding {
+  padding: 0 10px !important;
+}
 .item-md {
   color:#009B4D;
 }
 // card style
+.profile {
+  padding-left: 10px;
+}
 .profile h2{
-     font-size: 1.3rem;
+     font-size: 1.4rem;
   color:#009B4D;
   font-weight:700;
+  line-height:20px;
 }
 
 .profile img{
@@ -282,19 +292,19 @@ ion-badge {
   font-weight:700;
 }
 .title-page {
-  background-color:#fff;
-  border-bottom:solid 1px #009B4D;
-  color:#009B4D;
-  font-size:1.3rem;
-  font-weight:700;
-  margin-bottom:10px; 
+  background-color: #fff;
+    border-bottom: solid 2px #009B4D;
+    color: #009B4D;
+    font-size: 1.4rem;
+    font-weight: 700;
   text-align:center;
 }
 
 .pelayanan-list {
   border-bottom:solid 1px #E7E7E7; 
-  background-color:#FFF;
-  box-shadow: 0 0 1px rgba(86, 61, 124, 0.2), 0 2px 4px rgba(86, 61, 124, 0.15); 
+  //background-color:#FFF;
+  //padding:10px;
+
 }
 .pelayanan-list span{
   color:#ffffff;
@@ -331,6 +341,12 @@ ion-badge {
    margin: 10px 0px; 
 }
 
+.tabs-md .tabbar {
+    background: #FFF;
+}
+.tabs-ios .tabbar {
+    background: #FFF;
+}
 .card {
   background: #FFF;
  // border-radius: 1rem;
@@ -351,11 +367,18 @@ ion-badge {
 }
 
 // navbar style
+
 ion-navbar.no-border {
 
   .toolbar-background {
     border: none;
   }
+
+}
+
+.toolbar-md {
+    padding: 4px;
+    min-height: 46px;
 }
 
 //bottom tab
@@ -415,18 +438,43 @@ ion-navbar.no-border {
     }
   }
 }
+.toolbar-background-md {
+    border-color: #fff;
+    background: #fff;
+}
+
+.searchbar-md .searchbar-input {
+      border-radius: 20px;
+}
+
+.searchbar-ios .searchbar-input {
+      border-radius: 20px;
+}
+
+#slider {
+  margin-top:-13px;
+}
+.padding-content {
+  padding:10px !important; 
+}
+
+.item-md {
+    color: #009B4D;
+    border-bottom: solid 1px #EEE !important;
+}
+
 //
 .logo-header img {
-        width: 100px;
-        height: 50px;
-        margin: 0 auto ;
-        margin-left: -46px;
+        width: 130px;
+        //max-height: 80px;
+       // margin: 0 auto ;
+        margin-left: -55px;
 }
 .logo-header-clean img {
-        width: 100px;
-        height: 50px;
-        margin: 0 auto ;
-        margin-left: 10px;
+        width: 130px;
+        //max-height: 80px;
+        //margin: 0 auto ;
+        //margin-left: 10px;
 }
 // style for auth pages
 .register {

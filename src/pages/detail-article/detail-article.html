@@ -2,21 +2,21 @@
 <ion-header no-border>
   <ion-navbar color="secondary"> 
    <ion-buttons text-center  class="logo-header">
-      <img src="../assets/img/logo.svg"/>
+      <img src="./assets/img/logo.svg"/>
     </ion-buttons>  
   </ion-navbar>
 </ion-header>
  
-<ion-content padding  class="animated fadeIn common-bg">
+<ion-content   class="animated fadeIn common-bg">
 
 	<ion-card class="detail-article">
-	  <img src="../assets/img/1.JPG">
+	  <img src="./assets/img/detail_pasar.jpg">
 	  <ion-card-content>
 	    <ion-grid>
         	<ion-row>
           		<ion-col col-3>  
           			<ion-thumbnail item-start>
-			          <img src="../assets/img/logo-pasar-jaya.svg">
+			          <img src="./assets/img/logo-pasar-jaya.svg">
 			        </ion-thumbnail>
           		</ion-col>
           		<ion-col col-9>
@@ -29,13 +29,13 @@
 	</ion-card>
  	
  	<!-- button action -->
- 	<ion-grid>
-    	<ion-row>
-      		<ion-col col-6>
-      			<button ion-button block color="primary" (click)="detailPelayanan()">PELAYANAN KELUHAN</button>   
+ 	<ion-grid no-padding>
+    	<ion-row  class="button-padding">
+      		<ion-col col-6  >
+      			<button ion-button block color="primary" (click)="detailPelayanan()" >PELAYANAN KELUHAN</button>   
       		</ion-col>
-      		<ion-col col-6> 
-      			<button ion-button block color="danger">e-MONEV</button>   
+      		<ion-col col-6 > 
+      			<button ion-button block color="danger" >e-MONEV</button>   
       		</ion-col>
     	</ion-row>
 	</ion-grid>

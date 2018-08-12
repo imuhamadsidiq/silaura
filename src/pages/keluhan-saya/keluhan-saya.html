@@ -1,8 +1,8 @@
  
 <ion-header no-border>
   <ion-navbar color="secondary"> 
-   <ion-buttons text-center  class="logo-header">
-      <img src="../assets/img/logo.svg"/>
+   <ion-buttons text-center  class="logo-header-clean">
+      <img src="./assets/img/logo.svg"/>
     </ion-buttons>  
   </ion-navbar>
     <ion-toolbar no-padding no-border>
@@ -17,67 +17,69 @@
 </ion-header>
 
   
-<ion-content padding class="animated fadeIn common-bg"> 
+<ion-content  class="animated fadeIn common-bg ">  
+  <ion-card > 
+    <ion-card-content no-padding>
+        <ion-grid class="pelayanan-list" >
+            <ion-row>
+              <ion-col col-2>
+                <ion-thumbnail item-start>
+                    <img src="./assets/img/logo-pasar-jaya.svg">
+                  </ion-thumbnail>
+              </ion-col>
+                <ion-col col-7>  
+                  <span>Kebersihan</span>
+                  <h5><ion-icon name="pin"> </ion-icon> Pasar Senen</h5>
+                  <p>Di area dalam pasar banyak sekali sampah. mohon untuk tim kebersihan menjaga kebersihan pasar</p>
+                </ion-col>
+                <ion-col col-3 class="tanggal">  
+                   1 Juni 2018
+                   <p class="status-menunggu"> <ion-icon name="radio-button-on"> </ion-icon> Menunggu</p>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
 
-	
-    <ion-grid class="pelayanan-list" >
-    	<ion-row>
-    		<ion-col col-2>
-    			<ion-thumbnail item-start>
-		          <img src="../assets/img/logo-pasar-jaya.svg">
-		        </ion-thumbnail>
-    		</ion-col>
-      		<ion-col col-7>  
-      			<span>Kebersihan</span>
-      			<h5><ion-icon name="pin"> </ion-icon> Pasar Senen</h5>
-      			<p>Di area dalam pasar banyak sekali sampah. mohon untuk tim kebersihan menjaga kebersihan pasar</p>
-      		</ion-col>
-      		<ion-col col-3 class="tanggal">  
-      			 1 Juni 2018
-      			 <p class="status-menunggu"> <ion-icon name="radio-button-on"> </ion-icon> Menunggu</p>
-      		</ion-col>
-     	</ion-row>
- 	</ion-grid>
-
- 	 <ion-grid class="pelayanan-list">
-    	<ion-row>
-    		<ion-col col-2>
-    			<ion-thumbnail item-start>
-		          <img src="../assets/img/logo-pasar-jaya.svg">
-		        </ion-thumbnail>
-    		</ion-col>
-      		<ion-col col-7>  
-      			<span>Tempat Usaha</span>
-      			<h5><ion-icon name="pin"> </ion-icon> Pasar Senen</h5>
-      			<p>Kios di pasar ini sudah tidak layak, bangunan lama, harus dilakukan renovasi.</p>
-      		</ion-col>
-      		<ion-col col-3 class="tanggal">  
-      			22 Mei 2018
-      			 <p class="status-diproses"> <ion-icon name="radio-button-on"> </ion-icon> Di Proses</p>
-      		</ion-col>
-     	</ion-row>
- 	</ion-grid>
+         <ion-grid class="pelayanan-list">
+            <ion-row>
+              <ion-col col-2>
+                <ion-thumbnail item-start>
+                    <img src="./assets/img/logo-pasar-jaya.svg">
+                  </ion-thumbnail>
+              </ion-col>
+                <ion-col col-7>  
+                  <span>Tempat Usaha</span>
+                  <h5><ion-icon name="pin"> </ion-icon> Pasar Senen</h5>
+                  <p>Kios di pasar ini sudah tidak layak, bangunan lama, harus dilakukan renovasi.</p>
+                </ion-col>
+                <ion-col col-3 class="tanggal">  
+                  22 Mei 2018
+                   <p class="status-diproses"> <ion-icon name="radio-button-on"> </ion-icon> Di Proses</p>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
 
 
- 	 <ion-grid class="pelayanan-list">
-    	<ion-row>
-    		<ion-col col-2>
-    			<ion-thumbnail item-start>
-		          <img src="../assets/img/logo-pasar-jaya.svg">
-		        </ion-thumbnail>
-    		</ion-col>
-      		<ion-col col-7>  
-      			<span>Parkir & Keamanan</span>
-      			<h5><ion-icon name="pin"> </ion-icon> Pasar Senen</h5>
-      			<p>Tidak tersedianya area parkir sehingga, banyak yang parkir di jalan dan menyebabkan kemacetan.</p>
-      		</ion-col>
-      		<ion-col col-3 class="tanggal">  
-      			20 Mei 2018
-      			 <p class="status-selesai"> <ion-icon name="radio-button-on"> </ion-icon> Selesai </p>
-      		</ion-col>
-     	</ion-row>
- 	</ion-grid>
-
+         <ion-grid class="pelayanan-list">
+            <ion-row>
+              <ion-col col-2>
+                <ion-thumbnail item-start>
+                    <img src="./assets/img/logo-pasar-jaya.svg">
+                  </ion-thumbnail>
+              </ion-col>
+                <ion-col col-7>  
+                  <span>Parkir & Keamanan</span>
+                  <h5><ion-icon name="pin"> </ion-icon> Pasar Senen</h5>
+                  <p>Tidak tersedianya area parkir sehingga, banyak yang parkir di jalan dan menyebabkan kemacetan.</p>
+                </ion-col>
+                <ion-col col-3 class="tanggal">  
+                  20 Mei 2018
+                   <p class="status-selesai"> <ion-icon name="radio-button-on"> </ion-icon> Selesai </p>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-card-content>
+  </ion-card>
+ 
  
 
 </ion-content>

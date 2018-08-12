@@ -2,16 +2,16 @@
 <ion-header no-border>
   <ion-navbar color="secondary"> 
    <ion-buttons text-center  class="logo-header">
-      <img src="../assets/img/logo.svg"/>
+      <img src="./assets/img/logo.svg"/>
     </ion-buttons>  
   </ion-navbar> 
 </ion-header>
 
 
 
-<ion-content padding>
-	<ion-card class="monitoring-detail">  
-		<ion-card-content>
+<ion-content class="animated fadeIn common-bg ">
+	<ion-card>  
+		<ion-card-content padding>
 			<h3 text-center>KIRIM KELUHAN	</h3>
 	  <!-- Login form -->
 	    <form class="list-form"> 
@@ -29,28 +29,86 @@
 	        <ion-input type="email" value="rahmansetiyadi@gmail.com"></ion-input>
 	      </ion-item>
 
-	      <ion-item>
-	        <ion-label floating> 
-	        	Kategori
-	        </ion-label>
-	        <ion-input type="text"  ></ion-input>
-	      </ion-item> 
+	 
+	      <!-- category -->
+	       <ion-grid >
+	    	<ion-row text-center>
+	    		<ion-col col-4>
+	    			<button ion-button icon-only color="light">
+					  <ion-icon name="home"></ion-icon>
+					</button>
+	    		</ion-col>
+	      		<ion-col col-4>  
+	      		 	<button ion-button icon-only>
+					  <ion-icon name="home"></ion-icon>
+					</button>
+	      		</ion-col>
+	      		<ion-col col-4 >  
+	      			 <button ion-button icon-only>
+					  <ion-icon name="home"></ion-icon>
+					</button>
+	      		</ion-col>
+	      		<ion-col col-4>
+	    			 <button ion-button icon-only>
+					  <ion-icon name="home"></ion-icon>
+					</button>
+	    		</ion-col>
+	      		<ion-col col-4>  
+	      		 	<button ion-button icon-only>
+					  <ion-icon name="home"></ion-icon>
+					</button>
+	      		</ion-col>
+	      		<ion-col col-4 >  
+	      			<button ion-button icon-only>
+					  <ion-icon name="home"></ion-icon>
+					</button>
+	      		</ion-col>
+
+	     	</ion-row>
+	 	</ion-grid>
 
 	        <ion-item>
 	        <ion-label floating> 
 	        	Keluhan Anda
 	        </ion-label>
-	        <ion-input type="text"  ></ion-input>
+	        <ion-input type="text"  value="masukan keluhan Anda"></ion-input>
 	      </ion-item> 
-	    
-	    	<button ion-button block color="primary" tappable round>
-	        	Upload File
-	      	</button>
+ 
+	    	 <ion-list radio-group>
+				  <ion-list-header>
+				    Mengenai Informasi Pribadi Anda
+				  </ion-list-header>
 
+				  <ion-item>
+				    <ion-label>Rahasia</ion-label>
+				    <ion-radio checked="true" value="go"></ion-radio>
+				  </ion-item>
+
+				  <ion-item>
+				    <ion-label>Umum</ion-label>
+				    <ion-radio value="rust"></ion-radio>
+				  </ion-item>
+				  <p style="color:red;font-style: italic;font-size:10px;line-height: 10px;padding:10px;">*Jika anda memilih untuk merahasiakan data diri, kami tidak akan mempublish data diri anda sebagai pelapor</p>
+	  		</ion-list>
+	    	
+<!-- 	    	<ion-item>
+		      <ion-label id="profile_image" color="primary" stacked> File Pendukung </ion-label>
+		      <ion-input type="file" accept="image/*" (change)="changeListener($event)"  color="primary"></ion-input>
+		    </ion-item>
+ --> 
+	        <ion-label stacked padding> 
+	        	File Pendukung
+	        </ion-label> 
+	       <button ion-button icon-start block color="primary" tappable   padding >
+	       		<ion-icon name="arrow-round-down"></ion-icon>
+	        	Upload File
+	      	</button> 
+	      	 <p style="color:grey;font-style: italic;font-size:10px;line-height: 10px;padding:10px;">*Upload file pendukung dengan format images, pdf, mp4 (max 200MB) </p>
+	    	
 	    </form>
 
 	    <div margin-top>
-	      <button ion-button block color="secondary" tappable (click)="register()" round>
+	      <button ion-button block color="secondary" tappable (click)="kirimUsulan()" round>
 	        KIRIM USULAN
 	      </button>
 	    </div>

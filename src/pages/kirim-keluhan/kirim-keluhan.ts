@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams,ToastController,AlertController } from 'ionic-angular';
 
 /**
  * Generated class for the KirimKeluhanPage page.
@@ -15,11 +15,27 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class KirimKeluhanPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl:AlertController) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad KirimKeluhanPage');
   }
 
+  kirimUsulan(){
+  	 let forgot = this.alertCtrl.create({
+      title: 'Confirm',
+      message: "Kirim Keluhan .",
+      
+      buttons: [
+        {
+          text: 'Kirim',
+          handler: data => {
+            console.log('Cancel clicked');
+          }
+        } 
+      ]
+    });
+    forgot.present();
+  }
 }
